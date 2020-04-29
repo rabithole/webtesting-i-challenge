@@ -3,6 +3,8 @@ module.exports = {
   fail,
   repair,
   get,
+  hello,
+  sum,
 };
 
 function succeed(item) {
@@ -19,4 +21,13 @@ function repair(item) {
 
 function get(item) {
   return { ...item };
+}
+
+function hello() {
+  // console.log('hell world');
+  return 'hell world';
+}
+
+function sum(a,b) {
+  return a + b;
 }
