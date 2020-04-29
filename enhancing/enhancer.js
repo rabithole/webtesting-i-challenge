@@ -25,7 +25,7 @@ function get(item) {
 
 function hello() {
   // console.log('hell world');
-  return 'hell world';
+  return 'Hello Fucking World!';
 }
 
 function sum(a,b) {
