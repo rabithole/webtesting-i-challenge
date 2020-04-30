@@ -7,13 +7,28 @@ module.exports = {
   sum,
 };
 
-
+// const player = {
+//   name: 'Joe',
+//   durability: 55, // Number from 0 to 100;
+//   enhancement: 18 // Number from 0 to 20
+// }
 
 function succeed(item) {
+  item.enhancement === 20 ? item.enhancement : item.enhancement = item.enhancement + 1;
+
   return { ...item };
 }
 
+// succeed(player);
+// fail(player)
+
 function fail(item) {
+  item.enhancement < 15 ? item.enhancement = item.enhancement - 5 : item.enhancement; 
+  item.enhancement < 0 ? item.enhancement = 0 : item.enhancement; 
+  item.enhancement === 15 || item.enhancement === 16 ? item.enhancement = item.enhancement - 10 : item.enhancement;
+  item.enhancement > 16 ? item.enhancement = item.enhancement - 1 : item.enhancement;
+  console.log('enhancer.js', item)
+
   return { ...item };
 }
 

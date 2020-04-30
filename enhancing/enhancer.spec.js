@@ -14,10 +14,35 @@ describe('Enhancer.js File', () => {
         expect(repair(player)).toHaveProperty('durability', 100);
         expect(repair(player)).toHaveProperty('name');
     })
+
+    it('Enhancement success!', () => {
+        const playEnhance = playerSuccess.enhancement;
+        const playerEnhanced = playEnhance + 1;
+
+        expect(succeed(playerSuccess)).toHaveProperty('enhancement', playerEnhanced);
+    })
+
+    it('Enhancement Fail', () => {        
+        expect(fail(playerFail)).toHaveProperty('enhancement', 0);
+    })
 });
 
 const player = {
     name: 'Joe',
     durability: 55, // Number from 0 to 100;
+    enhancement: 14 // Number from 0 to 20
+}
+
+const playerSuccess = {
+    name: 'Joe',
+    durability: 55, // Number from 0 to 100;
+    enhancement: 14 // Number from 0 to 20
+}
+
+const playerFail = {
+    name: 'Joe',
+    durability: 55, // Number from 0 to 100;
     enhancement: 4 // Number from 0 to 20
-  }
+}
+
+
