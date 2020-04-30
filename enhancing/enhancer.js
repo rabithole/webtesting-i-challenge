@@ -15,12 +15,12 @@ module.exports = {
 
 function succeed(item) {
   item.enhancement === 20 ? item.enhancement : item.enhancement = item.enhancement + 1;
-
   return { ...item };
 }
 
 // succeed(player);
 // fail(player)
+// get(player)
 
 function fail(item) {
   item.enhancement < 15 ? item.enhancement = item.enhancement - 5 : item.enhancement; 
@@ -38,6 +38,7 @@ function repair(item) {
 }
 
 function get(item) {
+  item.enhancement > 0 ? item.name = '[+' + item.enhancement + ']' + ' ' + item.name : item.name;
   return { ...item };
 }
 
